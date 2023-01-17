@@ -16,13 +16,12 @@ async function sendRecord(logRecord) {
 
     const bodyData = [
       {
-        apiBaseURL: 'https://' + message.host,
+        apiBaseUrl: 'https://' + message.host,
         endpoint: message.resourcePath,
-        method: message.httpMethod,
         status: Number(message.status),
         type: 'http',
         timestamp: Math.round(message.requestTime / 1000),
-        originIP: message.ip,
+        originIp: message.ip,
       },
     ];
 
