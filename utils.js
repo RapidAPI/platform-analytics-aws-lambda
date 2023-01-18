@@ -19,9 +19,9 @@ async function sendRecord(logRecord) {
         apiBaseUrl: 'https://' + message.host,
         endpoint: message.resourcePath,
         status: Number(message.status),
-        type: 'http',
         timestamp: Math.round(message.requestTime / 1000),
         originIp: message.ip,
+        method: message.httpMethod,
       },
     ];
 
