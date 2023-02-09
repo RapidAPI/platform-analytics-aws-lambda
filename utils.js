@@ -22,6 +22,7 @@ async function sendRecord(logRecord) {
         timestamp: Math.round(message.requestTime / 1000),
         originIp: message.ip,
         method: message.httpMethod,
+        apiLatency: message.responseLatency || '',
       },
     ];
 
